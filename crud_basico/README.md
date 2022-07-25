@@ -67,3 +67,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - Banco de Dados: mysql
 - IDE: VSCode
+
+## Como Usar
+
+- Criar um Banco de dados local com o nome de "crud_basico"
