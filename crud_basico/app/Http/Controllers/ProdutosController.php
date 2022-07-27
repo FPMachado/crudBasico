@@ -21,7 +21,7 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade
        ]);
 
-       return "Produto Criado com Sucesso!";  
+       return redirect('/produto/listar');  
     }
 
     public function show($id)
@@ -66,5 +66,21 @@ class ProdutosController extends Controller
         $produto->delete();
 
         return "Produto Excluido com Sucesso";
+    }
+
+    public function index()
+    {
+        $produtos = Produto::all();
+        
+
+        foreach ($produtos as $key => $produto) {
+            $produto->id;
+            $produto->nome;
+            $produto->custo;
+            $produto->preco;
+            $produto->quantidade;
+
+            return view('produtos.index',compact('produtos'));
+        }
     }
 }
