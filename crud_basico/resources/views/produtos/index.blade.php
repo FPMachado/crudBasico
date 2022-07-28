@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
     <title>Listagem de produtos</title>
 </head>
 <body>
-    @include('flash-message')
-    @yield('content')
+    <main>
+        <div class="container-fluid">
+           <div class="row">
+            @if (session('msg'))
+                <p class="msg">{{session('msg')}}</p>
+            @endif    
+            @yield('name')
+            </div> 
+        </div>
+    </main>
     <table style='border: 1px solid black;'>
         <tr>
             <td style='border: 1px solid black; text-align: center'>Id</td>

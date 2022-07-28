@@ -43,13 +43,13 @@ class ProdutosController extends Controller
         $produto = Produto::findOrFail($id);
 
         $produto->update([
-            'nome'          =>  $request->nome,
+            'nome'          => $request->nome,
             'custo'         => $request->custo,
             'preco'         => $request->preco,
             'quantidade'    => $request->quantidade
         ]);
 
-        return redirect("/produto/")->with('sucesso', "Item modificado com sucesso");
+        return redirect("/produto/")->with('msg', "Item modificado com sucesso");
         //return with('sucesso');
     }
 
