@@ -8,14 +8,16 @@
     <title>Listagem de produtos</title>
 </head>
 <body>
+    @include('flash-message')
+    @yield('content')
     <table style='border: 1px solid black;'>
         <tr>
-            <td style='border: 1px solid black;'>Id</td>
-            <td style='border: 1px solid black;'>Nome</td>
-            <td style='border: 1px solid black;'>Custo</td>
-            <td style='border: 1px solid black;'>Preço</td>
-            <td style='border: 1px solid black;'>Quantidade</td>
-            <td style='border: 1px solid black;' colspan=2>Utilitários</td>
+            <td style='border: 1px solid black; text-align: center'>Id</td>
+            <td style='border: 1px solid black; text-align: center'>Nome</td>
+            <td style='border: 1px solid black; text-align: center'>Custo</td>
+            <td style='border: 1px solid black; text-align: center'>Preço</td>
+            <td style='border: 1px solid black; text-align: center'>Quantidade</td>
+            <td style='border: 1px solid black; text-align: center' colspan=2>Utilitários</td>
         </tr>
         @foreach($produtos as $produto)
             <tr>

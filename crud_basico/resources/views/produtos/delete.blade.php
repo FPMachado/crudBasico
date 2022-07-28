@@ -11,7 +11,8 @@
         @csrf
         <label for="">Tem certeza que deseja excluir este produto ?</label> <br />
         <input type="text" name="nome" value="{{$produto->nome}}"> <br/>
-        <button>Excluir</button>
+        <button style="margin-top: 4px;">Excluir</button>
+        <button style="margin-top: 4px;"><a href="/produto/">Voltar</a></button>
     </form>
 </body>
 </html>

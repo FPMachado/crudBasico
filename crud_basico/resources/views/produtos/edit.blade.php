@@ -21,7 +21,8 @@
         <label for="">Quantidade</label> <br />
         <input type="text" name="quantidade" value="{{$produto->quantidade}}"> <br />
 
-        <button>Salvar</button>
+        <button style="margin-top: 4px;">Salvar</button>
+        <button style="margin-top: 4px;"><a href="/produto/">Voltar</a></button>
     </form>
 </body>
 </html>

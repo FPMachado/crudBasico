@@ -14,12 +14,12 @@ class ProdutosController extends Controller
 
     public function store(Request $request)
     {
-       Produto::create([
+        Produto::create([
             'nome' => $request->nome,
             'custo' => $request->custo,
             'preco' => $request->preco,
             'quantidade' => $request->quantidade
-       ]);
+        ]);
 
        return redirect('/produto/');  
     }
@@ -49,7 +49,8 @@ class ProdutosController extends Controller
             'quantidade'    => $request->quantidade
         ]);
 
-        return redirect("/produto/ver/{$request->id}");
+        return redirect("/produto/")->with('sucesso', "Item modificado com sucesso");
+        //return with('sucesso');
     }
 
     public function delete($id)
