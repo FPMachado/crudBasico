@@ -21,7 +21,7 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade
        ]);
 
-       return redirect('/produto/listar');  
+       return redirect('/produto/');  
     }
 
     public function show($id)

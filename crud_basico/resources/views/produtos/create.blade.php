@@ -22,6 +22,7 @@
         <input type="text" name="quantidade"> <br />
 
         <button>Salvar</button>
+        <button><a href="/produto/">Voltar</a></button>
     </form>
 </body>
 </html>

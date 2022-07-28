@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Listagem de produtos</title>
 </head>
 <body>
@@ -14,19 +15,22 @@
             <td style='border: 1px solid black;'>Custo</td>
             <td style='border: 1px solid black;'>Preço</td>
             <td style='border: 1px solid black;'>Quantidade</td>
+            <td style='border: 1px solid black;' colspan=2>Utilitários</td>
         </tr>
-        @foreach($produtos as $p)
+        @foreach($produtos as $produto)
             <tr>
-                <td style='border: 1px solid black; text-align: center;'>{{$p->id}}</td>
-                <td style='border: 1px solid black; text-align: center;'>{{$p->nome}}</td>
-                <td style='border: 1px solid black; text-align: center;'>{{$p->custo}}</td>
-                <td style='border: 1px solid black; text-align: center;'>{{$p->preco}}</td>
-                <td style='border: 1px solid black; text-align: center;'>{{$p->quantidade}}</td>
+                <td style='border: 1px solid black; text-align: center;'>{{$produto->id}}</td>
+                <td style='border: 1px solid black; text-align: center;'>{{$produto->nome}}</td>
+                <td style='border: 1px solid black; text-align: center;'>{{$produto->custo}}</td>
+                <td style='border: 1px solid black; text-align: center;'>{{$produto->preco}}</td>
+                <td style='border: 1px solid black; text-align: center;'>{{$produto->quantidade}}</td>
+                <td style='border: 1px solid black; text-align: center;'><a href="/produto/editar/{{$produto->id}}"><i class="far fa-edit"></i></a></td>
+                <td style='border: 1px solid black; text-align: center;'><a href="/produto/excluir/{{$produto->id}}"><i class="fas fa-times"></i></a></td>
             </tr>
         @endforeach
     </table>
     
-    <button>Cadastrar Novo</button>
+    <button style='margin-top: 4px'><a href="/produto/novo/">Novo</i></a></button>
     
 </body>
 </html>

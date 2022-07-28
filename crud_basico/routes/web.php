@@ -40,4 +40,5 @@ Route::get('produto/excluir/{id}', 'ProdutosController@delete');
 //Metodo Destroy 
 Route::post('produto/excluir/{id}', 'ProdutosController@destroy')->name('excluir_produto');
 
+//Rota Responsavel pela Listagem
 Route::get('produto/', 'ProdutosController@index')->name('listar');
